@@ -1,0 +1,16 @@
+{
+    "name": "talktostranger",
+    "version": "1.0.0",
+    "description": "A simple chat and video call application",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1",
+        "http": "0.0.1-security",
+        "localtunnel": "^2.0.2",
+        "simple-peer": "^9.11.1",
+        "ws": "^8.3.0"
+    }
+}

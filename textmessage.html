@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mingle Magic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Allison&family=Bebas+Neue&family=Cinzel:wght@400;600;800&family=Fira+Sans&family=Fondamento&family=Josefin+Sans:wght@100;200;300;400;600&family=Jost:wght@100;200;300;400;600&family=Lato:wght@300;400&family=PT+Serif:wght@400;700&family=Quicksand:wght@400;500;600&family=Signika+Negative:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    p{
+        margin: auto !important;
+    }
+    .text-container .vts2{
+        width: 100% !important;
+    }
+    .text-container{
+        margin: 15px 50px;
+    }
+    .mc-content{
+        padding-right: 10px;
+        max-height: 400px;
+        min-height: 400px;
+
+    }
+    #popupMessages p{
+        font-family: var(--head-font);
+        margin-left: 45px !important;
+        color: red;
+    }
+    #popupMessages2{
+        font-family: var(--head-font);
+        margin-left: 45px !important;
+        color: red;
+    }
+    @media screen and (max-width:425px) {
+        .vts2 {
+            position: relative;
+            margin: 0;
+            bottom: 0;
+            transform: none;
+        }
+        .text-container {
+            margin: 17px 14px;
+        }
+    }
+
+    .msg-cont-send input{
+        
+        background: #cfcfcf;
+    }
+</style>
+<body>
+    
+    <header>
+            
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex g-3 align-items-center" href="#">
+                    <img src="https://cdn4.iconfinder.com/data/icons/celestial-and-witchcraft/500/magic_hand_sun_bright_light_energy_power_predict_crystal_witch_faith_witchcraft-512.png" alt="Logo" width="40" height="44" class="d-inline-block align-text-top">
+                    <p>Mingle Magic</p>
+                </a>
+
+                <div id="useronline" class="d-flex gap-2 align-items-center">
+
+                    <svg id="Layer_1_1_" style="height: 16px; width: 16px; enable-background: new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <circle cx="8" cy="8" r="8" fill="#38ba1c"/>
+                    </svg>
+                    <p class="d-flex gap-2 " >
+                        <span id="activeclient">2000</span> user online
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="text-container ">
+        <div class=" vts2 ">
+            <!-- message box -->
+
+            <div class="message-container justify-content-between position-relative ">
+                <div class="arrow-svg " id="arrow-msg">
+                    <svg class="arrow-svg-close" height="34px" id="Layer_1" style="enable-background:new 0 0 512 512;transform: rotate(90deg);" version="1.1" viewBox="0 0 512 512" width="40px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <polygon points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 " style="fill: #000; stroke: #000; stroke-width: 10;"></polygon>
+                    </svg>
+
+                    <svg class="arrow-svg-open overflow-hidden" height="10" width="45" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="0" y1="5" x2="50" y2="5" style="stroke:black; stroke-width:4"></line>
+                    </svg>
+                      
+                </div>
+                <div class="msg-cont-colu-1 mt-3">
+
+                    <div class="mc-h text-center">
+                        <h3>Messages</h3>
+                    </div>
+
+                    <div id="popupMessages2" class="fade show danger_alert"></div>
+                    <div id="popupMessages" class="fade show danger_alert"></div>
+
+                    <div class="mc-content mt-4">
+                        
+                        <div class="mb-loc d-flex gap-2 mb-3 justify-content-end">
+                            <div class="msg-blo msgborder-loc">
+                                <p class="text-break">hello </p>
+                            </div>
+                            <div class="loc-logo">
+                                I
+                            </div>
+                        </div>
+
+                        <div class="mb-rem d-flex gap-2  mb-2">
+                            <div class="loc-logo">
+                                S
+                            </div>
+                            <div class="msg-blo msgborder-rem">
+                                <p>hello world</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="msg-cont-send d-flex justify-content-between mt-3">
+                    <input type="text" id="sendmessage" fdprocessedid="z7a2o" disabled>
+
+                    <button onclick="sendtextmessage()" fdprocessedid="jqgi96">
+                        <svg height="27px" fill="#5858dd" style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="info"></g><g id="icons"><path d="M21.5,11.1l-17.9-9C2.7,1.7,1.7,2.5,2.1,3.4l2.5,6.7L16,12L4.6,13.9l-2.5,6.7c-0.3,0.9,0.6,1.7,1.5,1.2l17.9-9   C22.2,12.5,22.2,11.5,21.5,11.1z" id="send"></path></g></svg>
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- button details to handle -->
+            <div class="but-container">
+                <div class="col-12 d-flex justify-content-between p-3  ">
+                    <button id="endButton">STOP</button>
+                    <button id="startButton">NEXT</button>
+                </div>
+            </div>
+
+        </div>
+    
+    </div>
+
+    <!-- <div id="popupMessages" class="fade show danger_alert"></div> -->
+
+    <script src="textmsg.js"></script>
+    
+
+
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <!-- <script src="main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+</body>
+</html>

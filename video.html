@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mingle Magic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+p{
+    margin: auto !important;
+}
+#messages p{
+    position: absolute;
+    top: 80px;
+    right: 17px;
+    background: #dc3545;
+    color: white;
+    font-family: cursive;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+</style>
+<body>
+
+
+    <header>
+        
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand d-flex g-3 align-items-center" href="#">
+                    <img src="https://cdn4.iconfinder.com/data/icons/celestial-and-witchcraft/500/magic_hand_sun_bright_light_energy_power_predict_crystal_witch_faith_witchcraft-512.png" alt="Logo" width="40" height="44" class="d-inline-block align-text-top">
+                    <p>Mingle Magic</p>
+                </a>
+
+                <div id="useronline" class="d-flex gap-2 align-items-center">
+
+                    <svg id="Layer_1_1_" style="height: 16px; width: 16px; enable-background: new 0 0 16 16;" version="1.1" viewBox="0 0 16 16" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <circle cx="8" cy="8" r="8" fill="#38ba1c"/>
+                    </svg>
+                    <p class="d-flex gap-2 " >
+                        <span id="activeclient">2000</span> user online
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="bk">
+        <button id="Countrywise">
+            Bihar
+
+        </button>
+    </div>
+    <div class="maincontainer">
+        <div class="cont-v-m d-flex gap-3 position-relative overflow-hidden">
+            
+            <div class="col vts">
+                <!-- video box container -->
+                <div class="row">
+                    <div class="col-6 v-t-s position-relative vid-box-com ">
+                        <video id="localVideo" autoplay playsinline></video>
+                        <div class="loc-layer ">
+
+                            <div class="loc-la-con">
+
+                                <div class="loc-l-box">
+                                    <div class="llbvcb videoToggleButton">                 
+                                        <svg class="feather-video-on" enable-background="new 0 0 50 50" height="30px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                            <rect fill="none" height="50" width="50" />
+                                            <polygon fill="none" points="49,14 36,21 36,29   49,36 " stroke="#ffffff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
+                                            <path d="M36,36c0,2.209-1.791,4-4,4  H5c-2.209,0-4-1.791-4-4V14c0-2.209,1.791-4,4-4h27c2.209,0,4,1.791,4,4V36z" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
+                                        </svg>
+                                        <svg class="feather feather-video-off" fill="none" height="35" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10"/>
+                                            <line x1="1" x2="23" y1="1" y2="23"/>
+                                        </svg>
+                                          
+                                    </div>
+                                    <div class="llbvob micToggleButton">
+                                        
+    
+                                        <svg class="feather-voice-on" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" height="34">
+                                            <defs>
+                                              <style>.cls-1{fill: white; stroke-width: 3;}</style>
+                                            </defs>
+                                            <g data-name="Layer 46" id="Layer_46">
+                                              <path class="cls-1" d="M16,27A10,10,0,0,1,6,17a1,1,0,0,1,2,0,8,8,0,0,0,16,0,1,1,0,0,1,2,0A10,10,0,0,1,16,27Z"/>
+                                              <path class="cls-1" d="M16,31a1,1,0,0,1-1-1V26a1,1,0,0,1,2,0v4A1,1,0,0,1,16,31Z"/>
+                                              <path class="cls-1" d="M16,23a6,6,0,0,1-6-6V7A6,6,0,0,1,22,7V17A6,6,0,0,1,16,23ZM16,3a4,4,0,0,0-4,4V17a4,4,0,0,0,8,0V7A4,4,0,0,0,16,3Z"/>
+                                            </g>
+                                        </svg>
+                                          
+                                        <svg class="feather-voice-off" fill="none" height="34" viewBox="0 0 48 48" width="48" xmlns="http://www.w3.org/2000/svg" height="30">
+                                            <path d="M31 24V11C31 7.13401 27.866 4 24 4C20.134 4 17 7.13401 17 11V24C17 27.866 20.134 31 24 31C27.866 31 31 27.866 31 24Z" stroke="white" stroke-linejoin="round" stroke-width="4"/>
+                                            <path d="M39.0001 23C39.0001 25.1333 38.5547 27.1626 37.752 29" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                                            <path d="M9 23C9 31.2843 15.7157 38 24 38C25.7532 38 27.4361 37.6992 29 37.1465" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                                            <path d="M24 38V44" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                                            <path d="M42 42L6 6" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                                        </svg>
+                                          
+                                          
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 v-t-s position-relative vid-box-com ">
+                        <video id="remoteVideo" autoplay playsinline></video>
+                        <div class="rem-layer">
+                            <div class="rem-la-con">
+                                <div class="rem-vc-b " id="videoRemToggle">
+                                    <svg class="feather-rem-video-on" enable-background="new 0 0 50 50" height="15px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="20px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                        <rect fill="none" height="50" width="50" />
+                                        <polygon fill="none" points="49,14 36,21 36,29   49,36 " stroke="#ffffff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
+                                        <path d="M36,36c0,2.209-1.791,4-4,4  H5c-2.209,0-4-1.791-4-4V14c0-2.209,1.791-4,4-4h27c2.209,0,4,1.791,4,4V36z" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="4"/>
+                                    </svg>
+                                    <svg class="feather feather-rem-video-off" fill="none" height="15" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 16v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2m5.66 0H14a2 2 0 0 1 2 2v3.34l1 1L23 7v10"/>
+                                        <line x1="1" x2="23" y1="1" y2="23"/>
+                                    </svg>
+                                </div>
+                                <div class="rem-vo-b " id ="MicRemToggle">
+                                    <svg class="feather-rem-voice-on" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" height="15">
+                                        <defs>
+                                          <style>.cls-1{fill: white; stroke-width: 3;}</style>
+                                        </defs>
+                                        <g data-name="Layer 46" id="Layer_46">
+                                          <path class="cls-1" d="M16,27A10,10,0,0,1,6,17a1,1,0,0,1,2,0,8,8,0,0,0,16,0,1,1,0,0,1,2,0A10,10,0,0,1,16,27Z"/>
+                                          <path class="cls-1" d="M16,31a1,1,0,0,1-1-1V26a1,1,0,0,1,2,0v4A1,1,0,0,1,16,31Z"/>
+                                          <path class="cls-1" d="M16,23a6,6,0,0,1-6-6V7A6,6,0,0,1,22,7V17A6,6,0,0,1,16,23ZM16,3a4,4,0,0,0-4,4V17a4,4,0,0,0,8,0V7A4,4,0,0,0,16,3Z"/>
+                                        </g>
+                                    </svg>
+                                      
+                                    <svg class="feather-rem-voice-off" fill="none" height="15" viewBox="0 0 48 48" width="20" xmlns="http://www.w3.org/2000/svg" height="30">
+                                        <path d="M31 24V11C31 7.13401 27.866 4 24 4C20.134 4 17 7.13401 17 11V24C17 27.866 20.134 31 24 31C27.866 31 31 27.866 31 24Z" stroke="white" stroke-linejoin="round" stroke-width="4"/>
+                                        <path d="M39.0001 23C39.0001 25.1333 38.5547 27.1626 37.752 29" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                                        <path d="M9 23C9 31.2843 15.7157 38 24 38C25.7532 38 27.4361 37.6992 29 37.1465" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                                        <path d="M24 38V44" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                                        <path d="M42 42L6 6" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- button details to handle -->
+                <div class="but-container">
+                    <div class="col-12 d-flex justify-content-between p-3  ">
+                        <button id="endButton">STOP</button>
+                        <button id="startButton">NEXT</button>
+                    </div>
+                </div>
+                
+
+            </div>
+            <div class="col-3 vts2 "  >
+                <!-- message box -->
+
+                <div class="message-container justify-content-between position-relative ">
+                    <div class="arrow-svg "  id="arrow-msg">
+                        <svg class="arrow-svg-close" height="34px" id="Layer_1" style="enable-background:new 0 0 512 512;transform: rotate(90deg);" version="1.1" viewBox="0 0 512 512" width="40px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <polygon points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 " style="fill: #000; stroke: #000; stroke-width: 10;"></polygon>
+                        </svg>
+
+                        <svg class="arrow-svg-open overflow-hidden" height="10" width="45" xmlns="http://www.w3.org/2000/svg">
+                            <line x1="0" y1="5" x2="50" y2="5" style="stroke:black; stroke-width:4" />
+                        </svg>
+                          
+                    </div>
+                    <div class="msg-cont-colu-1 mt-3">
+
+                        <div class="mc-h text-center">
+                            <h3>Messages</h3>
+                        </div>
+    
+                        <div class="mc-content mt-4">
+                            
+                            <div class="mb-loc d-flex gap-2 mb-3">
+                                <div class="loc-logo">
+                                    I
+                                </div>
+                                <div class="msg-blo msgborder-loc">
+                                    <p class="text-break">hello </p>
+                                </div>
+                            </div>
+    
+                            <div class="mb-rem d-flex gap-2 justify-content-end mb-2">
+                                <div class="msg-blo msgborder-rem">
+                                    <p>hello world</p>
+                                </div>
+                                <div class="loc-logo">
+                                    S
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="msg-cont-send d-flex justify-content-between mt-3">
+                        <input type="text" id="sendmessage">
+
+                        <button onclick="sendtextmessage()">
+                            <svg height="27px" fill ="#5858dd" style="enable-background:new 0 0 24 24;" version="1.1" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="info"/><g id="icons"><path d="M21.5,11.1l-17.9-9C2.7,1.7,1.7,2.5,2.1,3.4l2.5,6.7L16,12L4.6,13.9l-2.5,6.7c-0.3,0.9,0.6,1.7,1.5,1.2l17.9-9   C22.2,12.5,22.2,11.5,21.5,11.1z" id="send"/></g></svg>
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+    <div id="messages" class="fade show danger_alert"></div>
+
+
+
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
