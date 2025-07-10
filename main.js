@@ -157,7 +157,13 @@ function handleTrack(event) {
 
 function initSocket() {
     // socket = new WebSocket('ws://localhost:3000/video.html');
-    socket = new WebSocket('ws://localhost:3000');
+    // socket = new WebSocket('ws://localhost:3000');
+    socket = new WebSocket(
+      window.location.protocol === 'https:' 
+        ? 'wss://' + window.location.host 
+        : 'ws://' + window.location.host
+    );
+
 
     socket.addEventListener('open', () => console.log('WebSocket connection opened'));
 
