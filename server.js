@@ -1,4 +1,5 @@
 
+
 const axios = require('axios');
 
 
@@ -14,6 +15,14 @@ const wss = new WebSocket.Server({ server });
 // Separate sets of clients for text messaging and video calling
 let textMessageClients = new Map();
 let videoChatClients = new Map();
+// Serve static files like HTML, CSS, JS
+app.use(express.static(__dirname));
+
+// Serve the homepage on root
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 
 wss.on('connection', (ws, req) => {
 
